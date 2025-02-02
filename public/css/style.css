@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(213, 210, 210);
+    display: flex;
+    flex-direction: column;
+}
+
+#first,#second{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#all{
+    display: flex;
+    flex-direction: column;
+}
+#third{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#location{
+    border: 0px;
+}
+
+h1,label{
+    font-weight: bold;
+}
+
+.textBox{
+    padding: 50px 20px;
+    width: 100%;
+    border: 0px;
+}
+#select-section{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.meetingDrop{
+    margin-right:5px;
+    width: 300%;
+}
+.otherText{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.above{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.weird{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: #13aa52;
+    border: 2px solid #13aa52;
+    border-radius: 10px;
+    cursor: pointer;    
+    font-size: 14px;
+    padding: 8px 8px;
+}
+#format{
+    display: flex;
+    flex-direction: row;
+    margin-left:5px;
+}

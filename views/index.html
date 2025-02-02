@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+        <title>Guest Book Form</title>
+</head>
+    <body>
+    <header>
+        <h1>Contact Form</h1>
+    </header>
+    <div id="all">
+            <br>
+            <div id = "first">
+                <label class = "above">First Name:
+                    <input type="text" name="fname">
+                </label>
+                <br><br><br>
+            
+                <label  class = "above">Last Name:
+                    <input type="text" name="lname">
+                </label>
+                <br><br><br>
+            
+                <label  class = "above">Job Title:
+                    <input type="text" name="job">
+                </label>
+                <br><br><br>
+            </div>
+
+            <div id = "second">
+                <label  class = "above">Company:
+                    <input type="text" name="company">
+                </label>
+                <br><br><br>
+            
+                <label  class = "above">LinkedIn URL:
+                    <input type="text" name="linked">
+                </label>
+                <br><br><br>
+            
+                <label  class = "above">Email Address:
+                    <input type="text" name="address">
+                </label>
+                <br><br><br>
+            </div>
+
+            <div id = "third">
+               <div id = select-section>
+                <label for="meeting"  class = "select">How did we meet:</label>
+                <select id = "meeting" name="location" class = "meetingDrop">
+                    <option value="default">Please Select</option>
+                    <option value="online">Online</option>
+                    <option value="irl">In-Person</option>
+                    <option value="event">Job Fair</option>
+                    <option value="friend">Friend Reccomendation</option>
+                </select>
+               </div>
+
+                <label class = "otherText">Other (Please Specify):
+                    <input type="text" name="other">
+                </label>
+            </div>
+            <br><br>
+
+                <label>Message
+                    <input type="text" name="message" class = "textBox" placeholder = "Write your message here">
+                </label>
+                <br>
+                    <label class = "weird">
+                        <input type="checkbox" name="mailing" value="mail">Please add me to your mailing list
+                    </label>
+                <br>
+                <div id = "format">
+                    <label>Choose an email format:
+                        <input type="radio" name="format" value="html">HTML
+                    </label>
+                    <label>
+                        <input type="radio" name="format" value="text">Text
+                    </label>
+                </div>
+                <br>
+        <button id = "contact-button" type="submit">Submit</button>
+    </div>
+    </body>
+</html>
