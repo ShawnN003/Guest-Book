@@ -25,10 +25,15 @@ app.post('/confirm', (req, res) => {
         mailing: req.body.mailing,
         format: req.body.format,
      };
+     
      contacts.push(contact);
      console.log(contacts);
      res.sendFile(`${import.meta.dirname}/views/confirm.html`);
  });
+
+ app.get('/admin/contacts', (req, res) => {
+    res.send(contacts);
+});
 
  app.get('/back', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/index.html`);
