@@ -2,8 +2,9 @@ import express from 'express';
 
 const app = express();
 
-app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
 const PORT = 3000;
 
 const contacts = [];
@@ -13,7 +14,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/confirm', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
     const contact = {
         fname: req.body.fname,
         lname: req.body.lname,
@@ -31,9 +31,18 @@ app.post('/confirm', (req, res) => {
      res.sendFile(`${import.meta.dirname}/views/confirm.html`);
  });
 
- app.get('/admin/contacts', (req, res) => {
-    res.send(contacts);
+
+
+app.get('/admin/contacts', (req, res) => {
+    let html = '<h1>Contacts</h1><ul>';
+    for (const contact of contacts) {
+        html += `<li>${contact.fname} ${contact.lname} - ${contact.email} - ${contact.address} - ${contact.location} - 
+        ${contact.other} - ${contact.message} - ${contact.mailing} - ${contact.format}</li>`;
+    }
+    html += '</ul>';
+    res.send(html);
 });
+
 
  app.get('/back', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/index.html`);
