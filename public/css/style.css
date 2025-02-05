@@ -28,11 +28,10 @@ h1,label{
 }
 
 .textBox{
-    padding: 10px 20px;
-    width: 10%;
+    padding: 50px 20px;
+    width: 100%;
     border: 0px;
     display: flex;
-    flex-wrap: wrap;
 }
 #select-section{
     display: flex;
