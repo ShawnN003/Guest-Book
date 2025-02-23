@@ -3,6 +3,9 @@ import express from 'express';
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+
+app.set('view engine', 'ejs');
+
 app.use(express.static('public'));
 
 const PORT = 3000;
@@ -25,9 +28,7 @@ app.post('/confirm', (req, res) => {
         mailing: req.body.mailing,
         format: req.body.format,
      };
-     
      contacts.push(contact);
-     console.log(contacts);
      res.sendFile(`${import.meta.dirname}/views/confirm.html`);
  });
 
@@ -47,6 +48,11 @@ app.get('/admin/contacts', (req, res) => {
  app.get('/back', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/index.html`);
  });
+
+ app.get('/back', (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/index.html`);
+ });
+
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
