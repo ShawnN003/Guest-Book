@@ -36,7 +36,6 @@ h1,label{
 #select-section{
     display: flex;
     flex-direction: column;
-
 }
 
 .meetingDrop{

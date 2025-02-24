@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+<body>
+    <form action = "back" method = "get">
+
+    <h2>Contact List:</h2>
+
+
+    <% for (let i=0; i < contacts.length; i++) { %>
+        <p><%= contacts[i].fname %> <%= contacts[i].lname %> <%= contacts[i].email %></p>
+        <hr>
+    <% } %>
+
+
+    <br><br>
+    <button id = "back" type="submit">Go Back</button><br>
+    </form>
+</body>
+</html>

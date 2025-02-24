@@ -10,7 +10,7 @@
     <header>
         <h1>Contact Form</h1>
     </header>
-    <form action="/confirm" method="post">
+    <form action="confirm" method="post">
 
     <div id="all">
             <br>
@@ -43,7 +43,7 @@
                 <br><br><br>
             
                 <label  class = "above">Email Address:
-                    <input type="text" name="address">
+                    <input type="text" name="email">
                 </label>
                 <br><br><br>
             </div>
@@ -83,8 +83,14 @@
                     </label>
                 </div>
                 <br>
-        <button id = "contact-button" type="submit">Submit</button>
+                <button id = "contact-button" type="submit">Submit</button><br>
         </form>
+
+        
+        <form action = "list" method = "get">
+        <button id = "contact-button" type="submit">Admin Page</button>
+        </form>
+
     </div>
     </body>
 </html>

@@ -8,12 +8,19 @@
 <body>
     <form action = "back" method = "get">
 
-    <h1>Thank You for your submission</h1>
-    <br><br>
-    <h4>Click to navigate back to the contact page</h4>
-    <button id = "navigate" type="submit">Go Back</button>
-    <button id = "data" type="submit">Admin Page</button>
+    <h1>Thank You for your submission <%= contact.fname %> <%= contact.lname %></h1>
 
+    <h3 class="timestamp">Time of Submission: <%= contact.timestamp.toLocaleString() %></h3>
+
+    <h4>Home Page: </h4>
+    <button id = "navigate" type="submit">Go Back</button><br>
     </form>
+
+<form action = "list" method = "get">
+    <h4>Admin Page:</h4>
+    <button id = "contactList" type = "submit">Go Back</button>
+</form>
+
+
 </body>
 </html>
